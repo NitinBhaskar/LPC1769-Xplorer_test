@@ -14,6 +14,7 @@ SECTIONS
 	{
 		KEEP(*(.isrvectors))
 		. = ALIGN(4);
+		*(.isrvectors)
 		*(.text)
 		*(.rodata)
 		*(.rodata*)
