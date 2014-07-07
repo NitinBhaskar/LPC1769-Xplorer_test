@@ -4,13 +4,12 @@ MEMORY
 	ram (wr) : ORIGIN = 0x10000000, LENGTH = 32K
 }
 
-vTopRam = ORIGIN(ram) + LENGTH(ram);
+vTopOfRam = ORIGIN(ram) + LENGTH(ram);
 
 SECTIONS
 {
 	.text :
 	{
-		KEEP(*(.isrvectors))
 		. = ALIGN(4);
 		*(.isrvectors)
 		*(.text)
