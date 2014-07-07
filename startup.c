@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include "LPC17xx.h"
 
-extern unsigned int vTopStack;
+extern unsigned int vTopRam;
 
 extern int main(void);
 
@@ -11,7 +11,7 @@ void ResetISR(void);
 __attribute__((section(".isrvectors")))
 void (* vecTable[])(void) =
 {
-	&vTopStack,
+	&vTopRam,
 	ResetISR
 };
 void ResetISR(void)
