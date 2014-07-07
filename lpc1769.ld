@@ -1,5 +1,3 @@
-ENTRY(ResetISR)
-
 MEMORY
 {
 	flash (rx) : ORIGIN = 0x00000000, LENGTH = 512K
