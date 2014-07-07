@@ -4,7 +4,7 @@ MEMORY
 	ram (wr) : ORIGIN = 0x10000000, LENGTH = 32K
 }
 
-vTopStack = ORIGIN(ram) + LENGTH(ram);
+vTopRam = ORIGIN(ram) + LENGTH(ram);
 
 SECTIONS
 {
